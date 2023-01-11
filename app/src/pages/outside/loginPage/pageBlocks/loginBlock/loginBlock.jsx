@@ -19,6 +19,10 @@ import { PageBlockContainer } from 'pages/outside/common/pageBlockContainer';
 import { LoginForm } from './loginForm';
 
 const messages = defineMessages({
+  reportPortal: {
+    id: 'LoginBlock.ReportPortal',
+    defaultMessage: 'Report Portal',
+  },
   welcome: {
     id: 'LoginBlock.welcome',
     defaultMessage: 'Welcome,',
