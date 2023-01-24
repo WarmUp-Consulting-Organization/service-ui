@@ -64,7 +64,7 @@
   width: 100%;
   height: 67px;
   box-sizing: border-box;
-  background: $COLOR--black-2 url(../img/rp_logo.png) no-repeat 50% 60%;
+  background: $COLOR--green-WP url(../img/warmup-white-logo.png) no-repeat center/80%;
   cursor: pointer;
 
   &:after {
@@ -73,7 +73,7 @@
     bottom: 1px;
     border-left: 28px solid transparent;
     border-right: 28px solid transparent;
-    border-bottom: 5px solid $COLOR--charcoal-grey;
+    border-bottom: 5px solid $COLOR--green-WP;
   }
 
   @media (max-width: $SCREEN_XS_MAX) {
@@ -91,6 +91,7 @@
   left: 56px;
   right: 0;
   min-height: 100%;
+  background-color: $COLOR--green-WP-login;
 
   @media (max-width: $SCREEN_XS_MAX) {
     left: 0;

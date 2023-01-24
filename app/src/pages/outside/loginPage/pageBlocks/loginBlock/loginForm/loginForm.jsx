@@ -259,7 +259,7 @@ export class LoginForm extends React.Component {
             disabled={isLoginLimitExceeded}
             roundedCorners
             type="submit"
-            color={'organish'}
+            color={'green-WP'}
           >
             {formatMessage(COMMON_LOCALE_KEYS.LOGIN)}
           </BigButton>

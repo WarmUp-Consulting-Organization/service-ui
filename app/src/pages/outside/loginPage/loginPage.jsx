@@ -99,6 +99,7 @@ export class LoginPage extends PureComponent {
       <div className={cx('login-page')}>
         <div className={cx('login-page-content')}>
           <div className={cx('background')} />
+          <div className={cx('logo')} />
           <LoginPageSection>{currentBlock}</LoginPageSection>
         </div>
       </div>

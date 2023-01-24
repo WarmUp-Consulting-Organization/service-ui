@@ -53,6 +53,19 @@
       border-color: darken($COLOR--booger, 30%);
     }
   }
+  &.color-green-WP {
+    background-color: $COLOR--green-WP;
+    border-color: $COLOR--green-WP;
+
+    &:hover:not(.disabled) {
+      background-color: darken($COLOR--green-WP, 15%);
+      border-color: darken($COLOR--green-WP, 15%);
+    }
+    &:active:not(.disabled) {
+      background-color: darken($COLOR--green-WP, 30%);
+      border-color: darken($COLOR--green-WP, 30%);
+    }
+  }
   &.color-organish {
     background-color: $COLOR--organish;
     border-color: $COLOR--organish;
