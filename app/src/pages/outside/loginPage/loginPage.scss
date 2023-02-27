@@ -16,8 +16,8 @@
 
 .login-page {
   position: relative;
-  width: 1000px;
-  height: 764px;
+  width: 500px;
+  height: 664px;
   margin: 0 auto;
   padding-top: 20px;
   box-sizing: border-box;
@@ -43,7 +43,7 @@
   box-sizing: border-box;
 
   @media (max-width: $SCREEN_SM_MAX) {
-    padding: 80px 50px 0;
+    padding: 240px 50px 0;
   }
   @media (max-width: $SCREEN_XS_MAX) {
     padding: 0;
@@ -74,7 +74,7 @@
 .logo {
   position: absolute;
   top: 20px;
-  left: 43%;
+  left: 38%;
   width: 140px;
   height: 200px;
   background-image: url(./img/warmup-logo.png);
@@ -84,11 +84,11 @@
   z-index: 1;
 
   @media (max-width: $SCREEN_SM_MAX) {
-    left: 50px;
+    left: 38%;
   }
   @media (max-width: $SCREEN_XS_MAX) {
     top: 15px;
-    left: 20px;
+    left: 38%;
     width: 100px;
     height: 16px;
   }
