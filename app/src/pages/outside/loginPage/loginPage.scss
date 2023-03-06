@@ -17,9 +17,9 @@
 .login-page {
   position: relative;
   width: 500px;
-  height: 664px;
+  height: 600px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 60px;
   box-sizing: border-box;
 
   @media (max-width: $SCREEN_SM_MAX) {
@@ -79,7 +79,7 @@
   height: 200px;
   background-image: url(./img/warmup-logo.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 75%;
   cursor: pointer;
   z-index: 1;
 

@@ -46,11 +46,11 @@
   }
 
   &:hover {
-    color: $COLOR--topaz;
+    color: $COLOR--green-WP;
 
     svg {
-      fill: lighten($COLOR--topaz, 10%);
-      stroke: lighten($COLOR--topaz, 10%);
+      fill: lighten($COLOR--green-WP, 10%);
+      stroke: lighten($COLOR--green-WP, 10%);
     }
   }
 
@@ -67,19 +67,19 @@
 }
 
 .view-tab-link.active {
-  color: $COLOR--topaz;
+  color: $COLOR--green-WP;
 
   svg {
-    fill: $COLOR--topaz;
-    stroke: $COLOR--topaz;
+    fill: $COLOR--green-WP;
+    stroke: $COLOR--green-WP;
   }
 
   &:hover {
-    color: lighten($COLOR--topaz, 10%);
+    color: lighten($COLOR--green-WP, 10%);
 
     svg {
-      fill: lighten($COLOR--topaz, 10%);
-      stroke: lighten($COLOR--topaz, 10%);
+      fill: lighten($COLOR--green-WP, 10%);
+      stroke: lighten($COLOR--green-WP, 10%);
     }
   }
 }

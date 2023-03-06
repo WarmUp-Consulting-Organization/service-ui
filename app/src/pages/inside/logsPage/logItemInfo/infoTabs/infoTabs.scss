@@ -71,13 +71,13 @@
 
   &.active,
   &.active:hover {
-    color: $COLOR--topaz;
-    fill: $COLOR--topaz;
+    color: $COLOR--green-WP;
+    fill: $COLOR--green-WP;
   }
 
   &.stroked.active svg,
   &.stroked.active:hover svg {
-    stroke: $COLOR--topaz;
+    stroke: $COLOR--green-WP;
   }
 
   @media (max-width: $SCREEN_XS_MAX) {

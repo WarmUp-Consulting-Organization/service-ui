@@ -60,13 +60,13 @@
     top: -1px;
     border-radius: 6px;
     background-color: $COLOR--white;
-    border: 1px solid $COLOR--topaz;
+    border: 1px solid $COLOR--green-WP;
     transition: 0.4s;
     box-sizing: border-box;
   }
 
   &.on {
-    background-color: $COLOR--tealish;
+    background-color: $COLOR--green-WP;
 
     &:before {
       -webkit-transform: translateX(8px);
