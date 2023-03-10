@@ -32,7 +32,7 @@ import { FieldErrorHint } from 'components/fields/fieldErrorHint';
 import { FieldBottomConstraints } from 'components/fields/fieldBottomConstraints';
 import { InputOutside } from 'components/inputs/inputOutside';
 import { BigButton } from 'components/buttons/bigButton';
-import PasswordIcon from './img/password-icon-inline.svg';
+import PasswordIcon from './img/password.svg';
 import styles from './changePasswordForm.scss';
 
 const cx = classNames.bind(styles);
