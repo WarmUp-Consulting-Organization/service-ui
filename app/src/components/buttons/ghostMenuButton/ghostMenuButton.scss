@@ -77,6 +77,35 @@
       color: $COLOR--white-two;
     }
   }
+  &.color-green:not(.disabled) {
+    border-color: $COLOR--green-WP;
+    color: $COLOR--green-WP;
+
+    .hamburger-icon-part {
+      background-color: $COLOR--green-WP;
+    }
+    polygon {
+      fill: $COLOR--green-WP;
+    }
+
+    &:hover {
+      background-color: lighten($COLOR--green-WP, 10%);
+      border-color: lighten($COLOR--green-WP, 10%);
+      color: $COLOR--white-two;
+
+      .hamburger-icon-part {
+        background-color: $COLOR--white-two;
+      }
+      polygon {
+        fill: $COLOR--white-two;
+      }
+    }
+    &:active {
+      background-color: $COLOR--green-WP;
+      border-color: $COLOR--green-WP;
+      color: $COLOR--white-two;
+    }
+  }
 }
 
 .hamburger-icon {
