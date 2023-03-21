@@ -1645,7 +1645,7 @@
   "StatusPageContent.launchesQuantity": "Quantidade de lançamentos",
   "StatusPageContent.owners": "Lança os proprietários",
   "StatusPageContent.systemIssues": "Porcentagem de problemas no sistema",
-  "StepGrid.defectType": "Defect Type",
+  "StepGrid.defectType": "Tipo de defeito",
   "StepGrid.hidePreconditionMethods": "Expandir os métodos e testes PASSED",
   "StepGrid.ignoreAAShort": "Ignorar AA",
   "StepGrid.ignoreAutoanalyzerTooltip": "Ignorar item em auto-análise",
