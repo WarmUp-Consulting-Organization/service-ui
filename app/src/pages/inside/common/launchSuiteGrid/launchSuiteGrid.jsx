@@ -361,7 +361,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: ENTITY_START_TIME,
         title: {
           full: formatMessage(messages.startTime),
-          short: 'start',
+          short: formatMessage(messages.startTime),
         },
         component: StartTimeColumn,
         sortable: true,
@@ -373,7 +373,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_TOTAL,
         title: {
           full: formatMessage(messages.total),
-          short: 'ttl',
+          short: formatMessage(messages.total),
         },
         component: TotalColumn,
         sortable: true,
@@ -385,7 +385,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_PASSED,
         title: {
           full: formatMessage(messages.passed),
-          short: 'ps',
+          short: formatMessage(messages.passed),
         },
         component: PassedColumn,
         sortable: true,
@@ -397,7 +397,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_FAILED,
         title: {
           full: formatMessage(messages.failed),
-          short: 'fl',
+          short: formatMessage(messages.failed),
         },
         component: FailedColumn,
         sortable: true,
@@ -409,7 +409,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_SKIPPED,
         title: {
           full: formatMessage(messages.skipped),
-          short: 'skp',
+          short: formatMessage(messages.skipped),
         },
         component: SkippedColumn,
         sortable: true,
@@ -421,7 +421,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_PB_TOTAL,
         title: {
           full: formatMessage(messages.productBug),
-          short: 'product bug',
+          short: formatMessage(messages.productBug),
         },
         component: PbColumn,
         customProps: {
@@ -437,7 +437,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_AB_TOTAL,
         title: {
           full: formatMessage(messages.autoBug),
-          short: 'auto bug',
+          short: formatMessage(messages.autoBug),
         },
         component: AbColumn,
         customProps: {
@@ -453,7 +453,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_SI_TOTAL,
         title: {
           full: formatMessage(messages.systemIssue),
-          short: 'system issue',
+          short: formatMessage(messages.systemIssue),
         },
         component: SiColumn,
         customProps: {
@@ -469,7 +469,7 @@ export class LaunchSuiteGrid extends PureComponent {
         id: STATS_TI_TOTAL,
         title: {
           full: formatMessage(messages.investigate),
-          short: 'to invest',
+          short: formatMessage(messages.investigate),
         },
         component: TiColumn,
         customProps: {
