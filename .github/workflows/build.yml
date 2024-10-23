@@ -19,13 +19,12 @@ on:
 
 env:
   UI_BUILD_REACT: 'app/'
+  BUILD_INFO_FILE: 'buildInfo.json'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [11, 12]
+
 
     steps:
       - uses: actions/checkout@v2
@@ -36,7 +35,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 12
 
      
       - name: JS Build
