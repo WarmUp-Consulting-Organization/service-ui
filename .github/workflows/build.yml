@@ -1,10 +1,11 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - '*'
-      - '!master'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Build version'
+        required: true
     paths-ignore:
       - readme.md
       - README.md
@@ -14,6 +15,7 @@ on:
     branches:
       - master
       - develop
+
 
 env:
   UI_BUILD_REACT: 'app/'
@@ -27,12 +29,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Generate Build info
+        run: |
+          echo '{"build": { "version": "${{ github.event.inputs.version }}", "branch": "${{ github.sha }}", "build_date": "${{ env.BUILD_DATE }}", "name": "Service UI", "repo": "${{ github.repository }}"}}' > ./${{ env.UI_BUILD_REACT }}build/${{ env.BUILD_INFO_FILE }}
+     
       - name: Setup NodeJS
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
+     
       - name: JS Build
         env:
           NODE_OPTIONS: '--max_old_space_size=2048'
@@ -43,5 +49,3 @@ jobs:
           npm --prefix ${{ env.UI_BUILD_REACT }} run test:coverage
           npm --prefix ${{ env.UI_BUILD_REACT }} run build
 
-      - name: Codecov report
-        uses: codecov/codecov-action@v1
