@@ -1,9 +1,9 @@
 FROM nginx:alpine
 
-LABEL maintainer="Andrei Varabyeu <andrei_varabyeu@epam.com>"
-LABEL version=5.7.2-security-fix-2
+LABEL maintainer="Raphael"
+LABEL version=5.7.4
 
-ENV APP_DOWNLOAD_URL https://github.com/reportportal/service-ui/releases/download/v5.7.2-security-fix-2
+ENV APP_DOWNLOAD_URL https://github.com/WarmUp-Consulting-Organization/service-ui/releases/download/v0.3
 
 ADD ${APP_DOWNLOAD_URL}/ui.tar.gz /
 
