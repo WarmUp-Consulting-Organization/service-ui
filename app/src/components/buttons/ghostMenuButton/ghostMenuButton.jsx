@@ -45,7 +45,7 @@ export class GhostMenuButton extends Component {
     title: '',
     items: [],
     disabled: false,
-    color: 'topaz',
+    color: 'green',
     tooltip: '',
     onClick: () => {},
   };

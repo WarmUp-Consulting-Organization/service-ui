@@ -2,6 +2,11 @@
 
 [![Build Status](https://semaphoreci.com/api/v1/lexecon/rp_service-ui/branches/develop/shields_badge.svg)](https://semaphoreci.com/lexecon/rp_service-ui)
 
+
+## Requisites
+
+Please make sure to use node version 12.
+
 ## Installation
 
 For development, you need a [node.js](https://nodejs.org).

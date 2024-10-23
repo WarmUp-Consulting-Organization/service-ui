@@ -19,16 +19,16 @@ import track from 'react-tracking';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { referenceDictionary, connectRouter } from 'common/utils';
+import { connectRouter } from 'common/utils';
 import { LOGIN_PAGE } from 'components/main/analytics/events';
 import { showDefaultErrorNotification } from 'controllers/notification';
 import styles from './loginPage.scss';
 import { LoginPageSection } from './loginPageSection';
-import { SocialSection } from './socialSection';
+// import { SocialSection } from './socialSection';
 import { LoginBlock } from './pageBlocks/loginBlock';
 import { ForgotPasswordBlock } from './pageBlocks/forgotPasswordBlock';
 import { ChangePasswordBlock } from './pageBlocks/changePasswordBlock';
-import { ServiceVersionsBlock } from './pageBlocks/serviceVersionsBlock';
+// import { ServiceVersionsBlock } from './pageBlocks/serviceVersionsBlock';
 import { MultipleAuthBlock } from './pageBlocks/multipleAuthBlock';
 
 const cx = classNames.bind(styles);
@@ -99,16 +99,8 @@ export class LoginPage extends PureComponent {
       <div className={cx('login-page')}>
         <div className={cx('login-page-content')}>
           <div className={cx('background')} />
-          <a href={referenceDictionary.rpLanding} target="_blank">
-            <div className={cx('logo')} />
-          </a>
-          <LoginPageSection left>
-            <SocialSection />
-          </LoginPageSection>
-          <LoginPageSection>
-            {currentBlock}
-            <ServiceVersionsBlock />
-          </LoginPageSection>
+          <div className={cx('logo')} />
+          <LoginPageSection>{currentBlock}</LoginPageSection>
         </div>
       </div>
     );

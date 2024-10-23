@@ -17,7 +17,7 @@
 import React, { Component, Fragment } from 'react';
 import track from 'react-tracking';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import { injectIntl, defineMessages } from 'react-intl';
 import classNames from 'classnames/bind';
 import { Grid } from 'components/main/grid';
 import { AbsRelTime } from 'components/main/absRelTime';
@@ -42,6 +42,29 @@ import { DefectType } from './defectType';
 import { GroupHeader } from './groupHeader';
 import { ItemInfoWithRetries } from './itemInfoWithRetries';
 import styles from './stepGrid.scss';
+
+const messages = defineMessages({
+  name: {
+    id: 'StepGrid.name',
+    defaultMessage: 'Name',
+  },
+  methodType: {
+    id: 'StepGrid.methodType',
+    defaultMessage: 'Method type',
+  },
+  startTime: {
+    id: 'StepGrid.startTime',
+    defaultMessage: 'Start time',
+  },
+  status: {
+    id: 'StepGrid.status',
+    defaultMessage: 'Status',
+  },
+  defectType: {
+    id: 'StepGrid.defectType',
+    defaultMessage: 'Defect Type',
+  },
+});
 
 const cx = classNames.bind(styles);
 
@@ -248,7 +271,7 @@ export class StepGrid extends Component {
       {
         id: ENTITY_METHOD_TYPE,
         title: {
-          full: 'method type',
+          full: formatMessage(messages.methodType),
         },
         sortable: true,
         component: MethodTypeColumn,
@@ -262,7 +285,7 @@ export class StepGrid extends Component {
       {
         id: 'name',
         title: {
-          full: 'name',
+          full: formatMessage(messages.name),
         },
         sortable: true,
         component: NameColumn,
@@ -279,7 +302,7 @@ export class StepGrid extends Component {
       {
         id: ENTITY_STATUS,
         title: {
-          full: 'status',
+          full: formatMessage(messages.status),
         },
         sortable: true,
         component: StatusColumn,
@@ -296,7 +319,7 @@ export class StepGrid extends Component {
       {
         id: ENTITY_START_TIME,
         title: {
-          full: 'start time',
+          full: formatMessage(messages.startTime),
         },
         sortable: true,
         component: StartTimeColumn,
@@ -307,7 +330,7 @@ export class StepGrid extends Component {
       {
         id: ENTITY_DEFECT_TYPE,
         title: {
-          full: 'defect type',
+          full: formatMessage(messages.defectType),
         },
         sortable: false,
         component: DefectTypeColumn,

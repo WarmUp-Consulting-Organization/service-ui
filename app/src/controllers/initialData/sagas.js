@@ -16,6 +16,7 @@
 
 import { put, takeEvery, take, all } from 'redux-saga/effects';
 import { fetchAppInfoAction } from 'controllers/appInfo';
+import { getAuthCookie } from 'common/utils/authCookie';
 import {
   FETCH_USER_ERROR,
   FETCH_USER_SUCCESS,
@@ -36,7 +37,8 @@ import { setInitialDataReadyAction } from './actionCreators';
 import { FETCH_INITIAL_DATA } from './constants';
 
 function* fetchInitialData() {
-  yield put(setTokenAction(getStorageItem(TOKEN_KEY) || DEFAULT_TOKEN));
+  const token = getAuthCookie() || getStorageItem(TOKEN_KEY) || DEFAULT_TOKEN;
+  yield put(setTokenAction(token));
   yield put(fetchAppInfoAction());
   yield put(fetchUserAction());
   const userResult = yield take([FETCH_USER_SUCCESS, FETCH_USER_ERROR]);

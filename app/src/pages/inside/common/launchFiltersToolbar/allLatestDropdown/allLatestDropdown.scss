@@ -20,11 +20,11 @@
   cursor: pointer;
   border: 1px solid $COLOR--gray-91;
   &.active {
-    background-color: $COLOR--gray-91;
+    background-color: $COLOR--green-WP;
   }
 
   @media (max-width: $SCREEN_SM_MAX) {
-    background-color: $COLOR--gray-80;
+    background-color: $COLOR--green-WP;
   }
 }
 
@@ -46,7 +46,7 @@
   text-align: center;
   text-transform: uppercase;
   &.active {
-    color: $COLOR--charcoal-grey;
+    color: $COLOR--white-two;
   }
 
   @media (max-width: $SCREEN_SM_MAX) {
@@ -101,7 +101,7 @@
   line-height: 8px;
   &.active {
     svg {
-      fill: $COLOR--charcoal-grey;
+      fill: $COLOR--white-two;
     }
   }
 

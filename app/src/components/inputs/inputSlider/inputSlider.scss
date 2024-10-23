@@ -33,11 +33,11 @@
       display: none;
     }
     .rc-slider-track {
-      background-color: $COLOR--topaz;
+      background-color: $COLOR--green-WP;
       height: 3px;
     }
     .rc-slider-handle {
-      background: $COLOR--topaz;
+      background: $COLOR--green-WP;
       border: none;
       width: 10px;
       height: 10px;
@@ -47,7 +47,7 @@
       font-size: 13px;
       color: $COLOR--charcoal-grey;
       &.rc-slider-mark-text-active {
-        color: $COLOR--topaz;
+        color: $COLOR--green-WP;
       }
     }
   }

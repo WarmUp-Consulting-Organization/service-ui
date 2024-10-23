@@ -129,7 +129,7 @@ export class ForgotPasswordForm extends PureComponent {
             </Link>
           </div>
           <div className={cx('forgot-password-button')}>
-            <BigButton type={'submit'} roundedCorners color={'organish'}>
+            <BigButton type={'submit'} roundedCorners color={'green-WP'}>
               <FormattedMessage id={'ForgotPasswordForm.sendEmail'} defaultMessage={'Send email'} />
             </BigButton>
           </div>

@@ -16,6 +16,7 @@
 
 import { all, call, put, select, takeEvery, take } from 'redux-saga/effects';
 import { fetch, updateToken } from 'common/utils/fetch';
+import { setAuthCookie, clearAuthCookie } from 'common/utils/authCookie';
 import {
   getSessionItem,
   getStorageItem,
@@ -72,6 +73,7 @@ import {
 import { tokenSelector } from './selectors';
 
 function* handleLogout() {
+  yield call(clearAuthCookie);
   yield put(resetTokenAction());
   yield put(fetchAppInfoAction());
   yield put(
@@ -98,7 +100,7 @@ function* loginSuccessHandler({ payload }) {
       type: NOTIFICATION_TYPES.SUCCESS,
     }),
   );
-
+  yield call(setAuthCookie, { payload });
   yield put(
     setTokenAction({
       type: payload.type,
@@ -196,6 +198,7 @@ function* handleSetToken({ payload }) {
   const tokenString = yield select(tokenSelector);
   yield call(updateToken, tokenString);
   yield call(setStorageItem, TOKEN_KEY, payload);
+  yield call(setAuthCookie, payload);
 }
 
 function* watchSetToken() {

@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 .active-tab {
-  color: $COLOR--topaz;
+  color: $COLOR--green-WP;
   &:before {
     position: absolute;
     bottom: -2px;
@@ -58,7 +58,7 @@
     right: 0;
     display: block;
     height: 2px;
-    background: $COLOR--topaz;
+    background: $COLOR--green-WP;
     content: '';
   }
   &:after {

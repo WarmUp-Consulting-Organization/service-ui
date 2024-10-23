@@ -18,5 +18,6 @@ export const ENGLISH = 'en';
 export const UKRAINIAN = 'uk';
 export const RUSSIAN = 'ru';
 export const BELARUSIAN = 'be';
+export const PORTUGUESE = 'pt';
 
 export const DEFAULT_LANGUAGE = ENGLISH;
