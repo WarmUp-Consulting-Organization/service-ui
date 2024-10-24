@@ -20,8 +20,9 @@ export function setAuthCookie(token) {
   const cookieOptions = {
     expires: 1, // 1 day
     domain: ROOT_DOMAIN,
-    secure: true,
+    secure: false,
     sameSite: 'lax',
+    path: '/',
   };
   Cookies.set(AUTH_COOKIE_NAME, encodedToken, cookieOptions);
 }
