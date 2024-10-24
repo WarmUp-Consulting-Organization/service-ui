@@ -2,18 +2,7 @@ import Cookies from 'js-cookie';
 
 const AUTH_COOKIE_NAME = 'AuthToken';
 
-// Function to determine the appropriate domain
-const getDomain = () => {
-  if (process.env.production) {
-    // Use the root domain to allow sharing across subdomains
-    return '.warmupweb.com';
-  } else {
-    return 'localhost';
-  }
-};
-
-const ROOT_DOMAIN = getDomain();
-
+const ROOT_DOMAIN = 'reportautomation-dev.warmupweb.com';
 export function setAuthCookie(token) {
   // Encode the JSON string
   const encodedToken = JSON.stringify(token);
@@ -22,7 +11,6 @@ export function setAuthCookie(token) {
     domain: ROOT_DOMAIN,
     secure: false,
     sameSite: 'lax',
-    path: '/',
   };
   Cookies.set(AUTH_COOKIE_NAME, encodedToken, cookieOptions);
 }
