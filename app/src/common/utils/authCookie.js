@@ -2,17 +2,16 @@ import Cookies from 'js-cookie';
 
 const AUTH_COOKIE_NAME = 'AuthToken';
 
-const ROOT_DOMAIN = 'reportautomation-dev.warmupweb.com';
+const ROOT_DOMAIN = '.warmupweb.com';
 export function setAuthCookie(token) {
   // Encode the JSON string
-  const encodedToken = JSON.stringify(token);
   const cookieOptions = {
     expires: 1, // 1 day
     domain: ROOT_DOMAIN,
     secure: false,
     sameSite: 'lax',
   };
-  Cookies.set(AUTH_COOKIE_NAME, encodedToken, cookieOptions);
+  Cookies.set(AUTH_COOKIE_NAME, token, cookieOptions);
 }
 
 export function getAuthCookie() {
@@ -30,12 +29,19 @@ export function getAuthCookie() {
 }
 
 export function removeAuthCookie() {
-  Cookies.remove(AUTH_COOKIE_NAME, { domain: ROOT_DOMAIN });
+  Cookies.remove(AUTH_COOKIE_NAME, {
+    expires: 1, // 1 day
+    domain: ROOT_DOMAIN,
+    secure: false,
+    sameSite: 'lax',
+  });
 }
 
 export function clearAuthCookie() {
   Cookies.remove(AUTH_COOKIE_NAME, {
+    expires: 1, // 1 day
     domain: ROOT_DOMAIN,
-    path: '/',
+    secure: false,
+    sameSite: 'lax',
   });
 }
