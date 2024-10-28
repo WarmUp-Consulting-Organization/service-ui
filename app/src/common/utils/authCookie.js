@@ -1,12 +1,13 @@
 import Cookies from 'js-cookie';
 
 const AUTH_COOKIE_NAME = 'AuthToken';
-
+const ROOT_DOMAIN = '.warmupweb.com';
 export function setAuthCookie(token) {
   // Encode the JSON string
   const encodeToken = JSON.stringify(token);
   const cookieOptions = {
     expires: 1, // 1 day
+    domain: ROOT_DOMAIN,
     secure: false,
     sameSite: 'lax',
   };
@@ -30,6 +31,7 @@ export function getAuthCookie() {
 export function removeAuthCookie() {
   Cookies.remove(AUTH_COOKIE_NAME, {
     expires: 1, // 1 day
+    domain: ROOT_DOMAIN,
     secure: false,
     sameSite: 'lax',
   });
@@ -38,6 +40,7 @@ export function removeAuthCookie() {
 export function clearAuthCookie() {
   Cookies.remove(AUTH_COOKIE_NAME, {
     expires: 1, // 1 day
+    domain: ROOT_DOMAIN,
     secure: false,
     sameSite: 'lax',
   });
