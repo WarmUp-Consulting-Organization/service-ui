@@ -144,3 +144,21 @@ service-ui:
   image: reportportal-custom-ui:latest
 
   siga todos os passos e chegara no pote de ouro
+
+
+#750e13
+ 
+#000000
+ 
+#ffffff
+ 
+#6b6b6b
+ 
+#b07728
+ 
+#f01e23
+ 
+#e6e6e6
+
+
+ 
